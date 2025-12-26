@@ -1,10 +1,10 @@
-package com.home.tunel;
+package com.home.tunnel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TunelApplicationTests {
+class TunnelApplicationTests {
 
   @Test
   void contextLoads() {}
