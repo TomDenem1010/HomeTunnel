@@ -15,9 +15,7 @@ public class VideoConfig {
   @Bean
   public VideoClient videoClient(
       final RestClient.Builder builder, final VideoProperties videoProperties) {
-    var restClient = builder
-        .baseUrl(videoProperties.getUrl())
-        .build();
+    var restClient = builder.baseUrl(videoProperties.getUrl()).build();
     var factory = HttpServiceProxyFactory.builderFor(RestClientAdapter.create(restClient)).build();
     return factory.createClient(VideoClient.class);
   }

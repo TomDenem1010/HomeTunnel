@@ -23,27 +23,27 @@ import org.springframework.web.service.annotation.PostExchange;
 @HttpExchange("/video")
 public interface VideoClient {
 
-    @PostExchange("/findVideos")
-    public HomeResponse<FindVideosResponse> findVideos(
-            final @RequestBody FindVideosRequest homeRequest);
+  @PostExchange("/findVideos")
+  public HomeResponse<FindVideosResponse> findVideos(
+      final @RequestBody FindVideosRequest homeRequest);
 
-    @PostExchange("/findFolders")
-    public HomeResponse<FindFoldersResponse> findFolders(
-            final @RequestBody FindFoldersRequest homeRequest);
+  @PostExchange("/findFolders")
+  public HomeResponse<FindFoldersResponse> findFolders(
+      final @RequestBody FindFoldersRequest homeRequest);
 
-    @PostExchange("/findActors")
-    public HomeResponse<FindActorsResponse> findActors(
-            final @RequestBody FindActorsRequest homeRequest);
+  @PostExchange("/findActors")
+  public HomeResponse<FindActorsResponse> findActors(
+      final @RequestBody FindActorsRequest homeRequest);
 
-    @PostExchange("/findByFolder")
-    public HomeResponse<FindByFolderResponse> findByFolder(
-            final @RequestBody FindByFolderRequestWrapper homeRequest);
+  @PostExchange("/findByFolder")
+  public HomeResponse<FindByFolderResponse> findByFolder(
+      final @RequestBody FindByFolderRequestWrapper homeRequest);
 
-    @PostExchange("/findByActor")
-    public HomeResponse<FindByActorResponse> findByActor(
-            final @RequestBody FindByActorRequestWrapper homeRequest);
+  @PostExchange("/findByActor")
+  public HomeResponse<FindByActorResponse> findByActor(
+      final @RequestBody FindByActorRequestWrapper homeRequest);
 
-    @GetExchange("/stream/{videoPath:**}")
-    public ResponseEntity<Resource> streamVideo(
-            @PathVariable("videoPath") String videoPath, @RequestHeader("Range") String rangeHeader);
+  @GetExchange("/stream/{videoPath:**}")
+  public ResponseEntity<Resource> streamVideo(
+      @PathVariable("videoPath") String videoPath, @RequestHeader("Range") String rangeHeader);
 }
