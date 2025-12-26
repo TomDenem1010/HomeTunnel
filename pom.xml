@@ -16,6 +16,7 @@
 		<maven.compiler.version>3.14.1</maven.compiler.version>
 		<home.common.version>1.1.0</home.common.version>
 		<lombok.version>1.18.42</lombok.version>
+		<ojdbc.version>23.26.0.0.0</ojdbc.version>
 		<spotless.version>3.1.0</spotless.version>
 		<google-java-format.version>1.33.0</google-java-format.version>
 	</properties>
@@ -27,11 +28,16 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-				<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -53,6 +59,12 @@
 			<groupId>com.home</groupId>
 			<artifactId>common</artifactId>
 			<version>${home.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<version>${ojdbc.version}</version>
 		</dependency>
 	</dependencies>
 
